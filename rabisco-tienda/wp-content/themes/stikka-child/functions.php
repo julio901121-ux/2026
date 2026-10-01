@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style(
 		'stikka-fuentes',
-		'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap',
+		'https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Nunito:wght@400;600;700;800&display=swap',
 		array(),
 		null
 	);

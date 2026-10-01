@@ -17,7 +17,7 @@ El riesgo principal del calendario era **Bold**: ya está verificado (1 oct).
 - **Fase 0 lista:** SSH con llave, inventario y primer respaldo ([docs/servidor.md](docs/servidor.md)).
 - **Fase 1 casi lista:** sitio en español y COP, WooCommerce 11.1, tema `stikka-child` (Kadence), páginas, menús, banner y WhatsApp. Se configura todo en `scripts/fase1.sh`.
 - **Marca:** se eligió la dirección (b), con base neutra, el tono de la "amiga cómplice" y Rosa y Turquesa suavizados. Detalle en [docs/marca.md](docs/marca.md).
-- **Falta de la Fase 1:** conversión a WebP en LiteSpeed (requiere QUIC.cloud y conviene hacerla con el dominio definitivo), wordmark provisional, número de WhatsApp y el visto bueno de Julio en el celular.
+- **Falta de la Fase 1:** conversión a WebP en LiteSpeed (requiere QUIC.cloud y conviene hacerla con el dominio definitivo), número de WhatsApp y el visto bueno de Julio en el celular.
 
 ---
 

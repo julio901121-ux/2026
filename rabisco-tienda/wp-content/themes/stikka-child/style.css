@@ -1,38 +1,76 @@
 /*
 Theme Name:   Rabisco Paper Studio
 Template:     kadence
-Description:  Tema hijo de Kadence para Rabisco Paper Studio (antes Stikka). Base clara y neutra, Rosa y Turquesa como acentos suaves.
-Version:      0.1.1
+Description:  Tema hijo de Kadence para Rabisco Paper Studio (antes Stikka). Base crema y neutra; los colores del logo van como acentos.
+Version:      0.2.1
 Text Domain:  stikka-child
 */
 
 /*
- * Paleta "punto intermedio": se definen sobre body para ganarle a las variables
- * que Kadence imprime en :root, y se replican en scripts/fase1.sh para el Personalizador.
+ * Paleta tomada del logo (branding/). Se define sobre body para ganarle a las variables
+ * que Kadence imprime en :root, y se replica en scripts/fase1.sh para el Personalizador.
  */
 body {
-	--global-palette1: #c2416f; /* Rosa profundo: botones y enlaces (contraste AA con blanco) */
-	--global-palette2: #a23459; /* Rosa al pasar el cursor */
-	--global-palette3: #2b2b2b; /* Grafito: títulos */
-	--global-palette4: #3f3b3a; /* Texto fuerte */
-	--global-palette5: #625c59; /* Texto */
-	--global-palette6: #8a827e; /* Texto suave */
-	--global-palette7: #ede7e3; /* Bordes y fondos sutiles */
-	--global-palette8: #faf7f4; /* Fondo cálido */
+	--global-palette1: #b8461f; /* Terracota del logo oscurecido: botones y enlaces (AA con blanco) */
+	--global-palette2: #2b2724; /* Tinta al pasar el cursor */
+	--global-palette3: #2b2724; /* Tinta de "Paper Studio": títulos */
+	--global-palette4: #3d3834; /* Texto fuerte */
+	--global-palette5: #5e5751; /* Texto */
+	--global-palette6: #8a817a; /* Texto suave */
+	--global-palette7: #ece4d6; /* Bordes y fondos sutiles */
+	--global-palette8: #fbf7ee; /* Crema del logo: fondo */
 	--global-palette9: #ffffff;
 
-	--stikka-turquesa: #2a9d8f;
-	--stikka-turquesa-suave: #e3f4f1;
-	--stikka-turquesa-texto: #1e6f66;
+	/* Colores de las letras de "rabisco", solo para detalles */
+	--rabisco-terracota: #d2552b;
+	--rabisco-azul: #2e4fb0;
+	--rabisco-mostaza: #e2a21a;
+	--rabisco-rosa: #d9487a;
+	--rabisco-verde: #3f8a5a;
+	--rabisco-turquesa: #2a9086;
+
+	--stikka-turquesa-suave: #e2f1ee;
+	--stikka-turquesa-texto: #1f6b63;
 	--stikka-radio: 14px;
 
+	/* Serifa tipo Bodoni como "Paper Studio" + redondeada para leer */
 	--global-body-font-family: "Nunito", system-ui, sans-serif;
-	--global-heading-font-family: "Nunito", system-ui, sans-serif;
+	--global-heading-font-family: "Bodoni Moda", "Didot", Georgia, serif;
 }
 
 h1, h2, h3, h4 {
-	font-weight: 800;
-	letter-spacing: -0.01em;
+	font-weight: 600;
+	letter-spacing: -0.005em;
+}
+
+/* Fondo crema del logo en todo el sitio */
+body,
+.content-bg,
+.site-header-row-container-inner,
+.site-footer-row-container-inner,
+.mobile-drawer-content-wrap {
+	background-color: var(--global-palette8) !important;
+}
+
+/* Logo del encabezado: el logo ya dice el nombre, no se repite en texto */
+.site-branding .site-title-wrap {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+.site-branding {
+	padding: 10px 0;
+}
+.site-branding .custom-logo {
+	max-width: 150px;
+	height: auto;
+}
+@media (min-width: 768px) {
+	.site-branding .custom-logo {
+		max-width: 190px;
+	}
 }
 
 /* Botones redondeados: amables, sin volverse infantiles */
@@ -68,8 +106,8 @@ input[type="submit"],
 	margin-bottom: 0.5rem;
 }
 
-/* Etiqueta de oferta en turquesa, no en el rojo por defecto */
+/* Etiqueta de oferta en el azul del logo, no en el rojo por defecto */
 .woocommerce span.onsale {
-	background: var(--stikka-turquesa);
+	background: var(--rabisco-azul);
 	border-radius: 999px;
 }

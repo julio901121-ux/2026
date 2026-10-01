@@ -36,7 +36,7 @@ wp option update woocommerce_specific_allowed_countries '["CO"]' --format=json
 # --- Tema: Kadence + hijo (el hijo se sube con desplegar.sh)
 wp theme install kadence
 wp theme activate stikka-child
-wp option update kadence_global_palette '{"palette":[{"color":"#c2416f","slug":"palette1","name":"Palette Color 1"},{"color":"#a23459","slug":"palette2","name":"Palette Color 2"},{"color":"#2b2b2b","slug":"palette3","name":"Palette Color 3"},{"color":"#3f3b3a","slug":"palette4","name":"Palette Color 4"},{"color":"#625c59","slug":"palette5","name":"Palette Color 5"},{"color":"#8a827e","slug":"palette6","name":"Palette Color 6"},{"color":"#ede7e3","slug":"palette7","name":"Palette Color 7"},{"color":"#faf7f4","slug":"palette8","name":"Palette Color 8"},{"color":"#ffffff","slug":"palette9","name":"Palette Color 9"}],"second-palette":[],"third-palette":[],"active":"palette"}'
+wp option update kadence_global_palette '{"palette":[{"color":"#b8461f","slug":"palette1","name":"Palette Color 1"},{"color":"#2b2724","slug":"palette2","name":"Palette Color 2"},{"color":"#2b2724","slug":"palette3","name":"Palette Color 3"},{"color":"#3d3834","slug":"palette4","name":"Palette Color 4"},{"color":"#5e5751","slug":"palette5","name":"Palette Color 5"},{"color":"#8a817a","slug":"palette6","name":"Palette Color 6"},{"color":"#ece4d6","slug":"palette7","name":"Palette Color 7"},{"color":"#fbf7ee","slug":"palette8","name":"Palette Color 8"},{"color":"#ffffff","slug":"palette9","name":"Palette Color 9"}],"second-palette":[],"third-palette":[],"active":"palette"}'
 wp theme mod set page_content_style unboxed
 wp eval 'set_theme_mod("footer_items", array(
 	"top"    => array("top_1"=>array(),"top_2"=>array(),"top_3"=>array(),"top_4"=>array(),"top_5"=>array()),
