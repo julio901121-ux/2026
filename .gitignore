@@ -1,0 +1,16 @@
+# Este repositorio es PÚBLICO: nada de claves, respaldos ni datos de clientes.
+.env
+.env.*
+*.pem
+*.key
+id_*
+wp-config.php
+*.sql
+*.sql.gz
+*.zip
+*.tar.gz
+backups/
+respaldos/
+exports/
+node_modules/
+.DS_Store
