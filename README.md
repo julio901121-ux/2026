@@ -4,7 +4,7 @@ Proyectos de 2026.
 
 | Proyecto | Qué es | Estado |
 |---|---|---|
-| [stikka-tienda](stikka-tienda/) | Tienda WooCommerce de Stikka.co en Hostinger | Fase 0, arranque 1 oct 2026 ([plan](stikka-tienda/PLAN.md)) |
+| [rabisco-tienda](rabisco-tienda/) | Tienda WooCommerce de Rabisco Paper Studio (antes Stikka) en Hostinger | Fase 1, 1 oct 2026 ([plan](rabisco-tienda/PLAN.md)) |
 
 ## Reglas del repo
 

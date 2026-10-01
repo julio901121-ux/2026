@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Fase 1 — configuración base de Stikka con WP-CLI (aplicada el 1 oct 2026).
+# Fase 1 — configuración base de Rabisco Paper Studio (antes Stikka) con WP-CLI (aplicada el 1 oct 2026).
 # Sirve como registro y para rehacer el sitio desde cero. Es seguro repetirlo,
 # salvo la creación de menús (crearía menús duplicados).
 # Después de esto: scripts/desplegar.sh y scripts/paginas.sh.
 set -euo pipefail
 
-ssh stikka 'bash -s' <<'REMOTO'
+ssh rabisco 'bash -s' <<'REMOTO'
 set -euo pipefail
 cd ~/domains/forestgreen-quetzal-442345.hostingersite.com/public_html
 
@@ -13,8 +13,8 @@ cd ~/domains/forestgreen-quetzal-442345.hostingersite.com/public_html
 wp language core install es_CO --activate
 wp option update timezone_string America/Bogota
 wp option update date_format 'j \d\e F \d\e Y'
-wp option update blogname "Stikka"
-wp option update blogdescription "La marca que sí pega"
+wp option update blogname "Rabisco Paper Studio"
+wp option update blogdescription "Papelería personalizada, hecha en familia"
 wp option update blog_public 0            # oculto para buscadores hasta el lanzamiento
 wp rewrite structure "/%postname%/" --hard
 
@@ -44,7 +44,7 @@ wp eval 'set_theme_mod("footer_items", array(
 	"bottom" => array("bottom_1"=>array("footer-navigation"),"bottom_2"=>array("footer-html"),"bottom_3"=>array(),"bottom_4"=>array(),"bottom_5"=>array()),
 ));
 set_theme_mod("footer_bottom_columns", "2");
-set_theme_mod("footer_html_content", "© {year} Stikka · Hecho en familia en Bogotá");'
+set_theme_mod("footer_html_content", "© {year} Rabisco Paper Studio · Hecho en familia en Bogotá");'
 
 # --- Páginas de WooCommerce en español (IDs de esta instalación)
 wp post update 6 --post_title="Tienda" --post_name=tienda
@@ -56,7 +56,7 @@ REMOTO
 # --- Contenido de páginas desde contenido/paginas/
 "$(dirname "$0")/paginas.sh"
 
-ssh stikka 'bash -s' <<'REMOTO'
+ssh rabisco 'bash -s' <<'REMOTO'
 set -euo pipefail
 cd ~/domains/forestgreen-quetzal-442345.hostingersite.com/public_html
 id() { wp post list --post_type=page --post_status=any --fields=ID,post_name --format=csv | awk -F, -v s="$1" '$2==s {print $1; exit}'; }

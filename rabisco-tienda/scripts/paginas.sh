@@ -25,15 +25,15 @@ SLUGS=("$@")
 [ ${#SLUGS[@]} -eq 0 ] && SLUGS=($(ls *.html | sed 's/\.html$//'))
 
 for slug in "${SLUGS[@]}"; do
-	scp -q "$slug.html" "stikka:/tmp/stikka-$slug.html"
+	scp -q "$slug.html" "rabisco:/tmp/stikka-$slug.html"
 	# --name con --post_status=any no encuentra borradores; por eso se filtra la lista completa.
-	id=$(ssh stikka "$WP post list --post_type=page --post_status=publish,draft,pending,private --fields=ID,post_name --format=csv" | awk -F, -v s="$slug" '$2==s {print $1; exit}')
+	id=$(ssh rabisco "$WP post list --post_type=page --post_status=publish,draft,pending,private --fields=ID,post_name --format=csv" | awk -F, -v s="$slug" '$2==s {print $1; exit}')
 	if [ -z "$id" ]; then
-		id=$(ssh stikka "$WP post create /tmp/stikka-$slug.html --post_type=page --post_status=publish --post_name=$slug --post_title='$(titulo "$slug")' --porcelain")
+		id=$(ssh rabisco "$WP post create /tmp/stikka-$slug.html --post_type=page --post_status=publish --post_name=$slug --post_title='$(titulo "$slug")' --porcelain")
 		echo "Creada:      $slug (#$id)"
 	else
-		ssh stikka "$WP post update $id /tmp/stikka-$slug.html --post_status=publish --quiet"
+		ssh rabisco "$WP post update $id /tmp/stikka-$slug.html --post_status=publish --quiet"
 		echo "Actualizada: $slug (#$id)"
 	fi
-	ssh stikka "rm -f /tmp/stikka-$slug.html"
+	ssh rabisco "rm -f /tmp/stikka-$slug.html"
 done

@@ -1,6 +1,6 @@
 <?php
 /**
- * Stikka Core: ajustes editables desde Ajustes → Stikka.
+ * Stikka Core: ajustes editables desde Ajustes → Rabisco.
  *
  * - Banner de fecha límite: se muestra arriba del sitio hasta la fecha indicada
  *   (hora de Bogotá) y se oculta solo al vencer.
@@ -18,7 +18,7 @@ function stikka_ajustes() {
 			'banner_texto' => '',
 			'banner_hasta' => '',
 			'whatsapp'     => '',
-			'whatsapp_msj' => '¡Hola Stikka! Quiero hacer un pedido 💌',
+			'whatsapp_msj' => '¡Hola Rabisco! Quiero hacer un pedido 💌',
 		)
 	);
 }
@@ -26,7 +26,7 @@ function stikka_ajustes() {
 /* ---------- Página de ajustes ---------- */
 
 add_action( 'admin_menu', function () {
-	add_options_page( 'Stikka', 'Stikka', 'manage_options', 'stikka', 'stikka_pagina_ajustes' );
+	add_options_page( 'Rabisco', 'Rabisco', 'manage_options', 'stikka', 'stikka_pagina_ajustes' );
 } );
 
 add_action( 'admin_init', function () {
@@ -47,7 +47,7 @@ function stikka_pagina_ajustes() {
 	$a = stikka_ajustes();
 	?>
 	<div class="wrap">
-		<h1>Stikka</h1>
+		<h1>Rabisco Paper Studio</h1>
 		<form method="post" action="options.php">
 			<?php settings_fields( 'stikka' ); ?>
 			<h2>Banner de fecha límite</h2>

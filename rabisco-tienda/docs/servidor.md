@@ -10,12 +10,12 @@ Datos del hosting, sin claves ni contraseñas.
 | Host SSH | 88.223.84.43 |
 | Puerto SSH | 65002 |
 | Usuario SSH | u320508150 |
-| Alias en el Mac | `ssh stikka` (en `~/.ssh/config`) |
+| Alias en el Mac | `ssh rabisco` (en `~/.ssh/config`) |
 | Ruta del sitio | `~/domains/forestgreen-quetzal-442345.hostingersite.com/public_html` |
 
-> En el mismo hosting también vive **axisejecutivo.com**. No se toca: todo el trabajo se queda dentro de la carpeta de Stikka.
+> En el mismo hosting también vive **axisejecutivo.com**. No se toca: todo el trabajo se queda dentro de la carpeta de la tienda.
 | URL temporal de WordPress | https://forestgreen-quetzal-442345.hostingersite.com |
-| Dominio definitivo | stikka.co (_pendiente de comprar/apuntar_) |
+| Dominio definitivo | _pendiente_ (al 1 oct estaban libres rabisco.co, rabisco.com.co, rabiscopaper.co, rabiscopaper.com y rabiscopaperstudio.com/.co) |
 
 ## Estado inicial (1 oct 2026, visto desde fuera)
 
@@ -33,8 +33,8 @@ Datos del hosting, sin claves ni contraseñas.
 ## Respaldos
 
 - Script: [`scripts/respaldo.sh`](../scripts/respaldo.sh) (`wp db export` no funciona aquí; usa mysqldump).
-- En el servidor: `~/respaldos/stikka/` (fuera de public_html, permisos 700).
-- En el Mac: `~/Documents/PROYECTOS/stikka-respaldos/` (nunca en Git).
+- En el servidor: `~/respaldos/rabisco/` (fuera de public_html, permisos 700).
+- En el Mac: `~/Documents/PROYECTOS/rabisco-respaldos/` (nunca en Git).
 - Primer respaldo: `20261001-1633-inicial` (29 tablas, BD de 23 KB comprimida, wp-content de 40 MB).
 - Pendiente de Julio: confirmar en hPanel → Respaldos que los respaldos automáticos estén activos.
 

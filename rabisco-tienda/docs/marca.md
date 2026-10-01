@@ -1,5 +1,19 @@
 # Marca en la tienda
 
+## Nombre: Rabisco Paper Studio (desde el 1 oct 2026)
+
+Reemplaza por completo a **Stikka**. En el sitio ya se cambiaron el título, el pie de página,
+los textos, el remitente de los correos y el mensaje de WhatsApp.
+
+- **Lema provisional:** "Papelería personalizada, hecha en familia". "La marca que sí pega"
+  jugaba con los stickers de Stikka y ya no aplica, así que hay que definir un lema nuevo.
+- **Nombres internos sin cambiar:** el tema `stikka-child`, el plugin `stikka-core` y la opción
+  `stikka_ajustes`. Cambiar el slug del tema borraría los ajustes de Kadence y no se ven en el sitio.
+  El alias `ssh stikka` sigue funcionando junto a `ssh rabisco`.
+- Lo de abajo (tono, paleta, tipografía) se decidió con el nombre anterior y sigue vigente.
+
+---
+
 Decisión del 1 oct 2026: **base neutra, mismo tono y colores más suaves** (opción b).
 El manual original (`Manual_de_Marca_Stikka.docx`, sept 2026) pedía colores vivos y saturados.
 Se mantiene la personalidad de la "amiga cómplice" y se baja la intensidad visual para encajar

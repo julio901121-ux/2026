@@ -1,4 +1,6 @@
-# Stikka.co — Plan para arrancar la tienda
+# Rabisco Paper Studio — Plan para arrancar la tienda
+
+> El 1 oct 2026 la marca pasó de **Stikka** a **Rabisco Paper Studio**. Las menciones de Stikka más abajo son históricas.
 
 Mañana: jueves 1 de octubre de 2026. Meta: lanzar el sábado 3 de octubre.
 
