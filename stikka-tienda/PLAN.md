@@ -8,7 +8,14 @@ Mañana: jueves 1 de octubre de 2026. Meta: lanzar el sábado 3 de octubre.
 | Vie 2 oct | 2 Productos y checkout | Se puede comprar de punta a punta (Bold en pruebas) |
 | Sáb 3 oct | 3 Lanzamiento | Compra real verificada, Píxel validado, sitio abierto |
 
-El riesgo principal del calendario es **Bold**: si la cuenta no está verificada, el lanzamiento se corre aunque la tienda esté lista.
+El riesgo principal del calendario era **Bold**: ya está verificado (1 oct).
+
+## Estado al 1 oct 2026
+
+- **Fase 0 lista:** SSH con llave, inventario y primer respaldo ([docs/servidor.md](docs/servidor.md)).
+- **Fase 1 casi lista:** sitio en español y COP, WooCommerce 11.1, tema `stikka-child` (Kadence), páginas, menús, banner y WhatsApp. Se configura todo en `scripts/fase1.sh`.
+- **Marca:** se eligió la dirección (b), con base neutra, el tono de la "amiga cómplice" y Rosa y Turquesa suavizados. Detalle en [docs/marca.md](docs/marca.md).
+- **Falta de la Fase 1:** conversión a WebP en LiteSpeed (requiere QUIC.cloud y conviene hacerla con el dominio definitivo), wordmark provisional, número de WhatsApp y el visto bueno de Julio en el celular.
 
 ---
 
@@ -16,15 +23,15 @@ El riesgo principal del calendario es **Bold**: si la cuenta no está verificada
 
 Esto es lo único que bloquea el arranque. Ten estas respuestas a mano:
 
-- [ ] **Hostinger:** entra a hPanel y anota qué plan tienes (Premium, Business, Cloud o VPS).
-- [ ] **SSH:** hPanel → Avanzado → Acceso SSH → actívalo. Anota host, puerto y usuario (no la contraseña).
-- [ ] **WordPress:** ¿ya está instalado en el dominio temporal? Anota la URL.
-- [ ] **Dirección de marca:** decide entre
+- [x] **Hostinger:** plan Premium, vence el 20 may 2028.
+- [x] **SSH:** activado y con la llave cargada.
+- [x] **WordPress:** instalado en https://forestgreen-quetzal-442345.hostingersite.com
+- [x] **Dirección de marca:** se eligió la (b). Opciones que había:
   - (a) el manual de marca tal cual (colores vivos, tono divertido),
   - (b) la propuesta intermedia: base clara + Grafito, Rosa y Turquesa como acentos, tipografía redondeada (recomendada),
   - (c) fino/minimalista como decía el brief original.
-- [ ] **Git:** confirma que Claude puede configurar git con tu nombre y julio901121@gmail.com, y si quieres el repo también en GitHub privado o solo local + servidor.
-- [ ] **Bold:** revisa si la cuenta existe y está verificada. Si no, **empieza el registro hoy mismo**.
+- [x] **Git:** repo público github.com/julio901121-ux/2026 (sin claves ni respaldos).
+- [x] **Bold:** cuenta verificada.
 
 ## 2. Sesión de mañana con Claude
 
