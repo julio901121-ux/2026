@@ -10,3 +10,4 @@ Proyectos de 2026.
 
 - Es **público**: claves, contraseñas, respaldos y datos de clientes nunca se suben (ver `.gitignore`).
 - Cada proyecto tiene su carpeta con un `PLAN.md` y una carpeta `docs/`.
+- Para crear productos de Rabisco: [rabisco-tienda/GUIA-PRODUCTOS.md](rabisco-tienda/GUIA-PRODUCTOS.md).
