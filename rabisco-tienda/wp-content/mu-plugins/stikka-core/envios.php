@@ -130,6 +130,34 @@ add_action( 'wp_footer', function () {
 	<?php
 } );
 
+/* Pedidos para recoger: aviso en la página de gracias y en el correo */
+function rabisco_es_recogida( $order ) {
+	foreach ( $order->get_shipping_methods() as $m ) {
+		if ( 'local_pickup' === $m->get_method_id() ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function rabisco_texto_recogida() {
+	return 'Lo recoges en Santa Bárbara Oriental (Bogotá). Cuando esté listo te escribimos por WhatsApp para darte la dirección exacta y acordar la hora.';
+}
+
+add_action( 'woocommerce_thankyou', function ( $order_id ) {
+	$order = wc_get_order( $order_id );
+	if ( $order && rabisco_es_recogida( $order ) ) {
+		printf( '<p class="rabisco-entrega">📍 %s</p>', esc_html( rabisco_texto_recogida() ) );
+	}
+}, 5 );
+
+add_action( 'woocommerce_email_after_order_table', function ( $order, $sent_to_admin, $plain_text ) {
+	if ( $sent_to_admin || ! rabisco_es_recogida( $order ) ) {
+		return;
+	}
+	echo $plain_text ? "\n" . rabisco_texto_recogida() . "\n" : '<p><strong>📍 ' . esc_html( rabisco_texto_recogida() ) . '</strong></p>';
+}, 10, 3 );
+
 /* La localidad en el pedido: admin y correos */
 add_action( 'woocommerce_admin_order_data_after_billing_address', function ( $order ) {
 	$loc = $order->get_meta( '_billing_localidad' );

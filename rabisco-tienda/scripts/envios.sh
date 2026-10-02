@@ -22,11 +22,11 @@ $bog = new WC_Shipping_Zone(); $bog->set_zone_name( "Bogotá" ); $bog->set_zone_
 $bog->add_location( "CO:CO-DC", "state" ); $bog->save();
 update_option( "rabisco_envio_norte", rab_metodo( $bog, "flat_rate", "Domicilio Bogotá norte (Usaquén y Chapinero)", 6000 ) );
 update_option( "rabisco_envio_resto", rab_metodo( $bog, "flat_rate", "Domicilio resto de Bogotá", 8500 ) );
-rab_metodo( $bog, "local_pickup", "Recoger (gratis)", 0 );
+rab_metodo( $bog, "local_pickup", "Recoger en Santa Bárbara Oriental (gratis)", 0 );
 $nal = new WC_Shipping_Zone(); $nal->set_zone_name( "Resto de Colombia" ); $nal->set_zone_order( 2 );
 $nal->add_location( "CO", "country" ); $nal->save();
 rab_metodo( $nal, "flat_rate", "Envío nacional", 15000 );
-rab_metodo( $nal, "local_pickup", "Recoger en Bogotá (gratis)", 0 );
+rab_metodo( $nal, "local_pickup", "Recoger en Bogotá, Santa Bárbara Oriental (gratis)", 0 );
 echo "Zonas creadas\n";
 '"'"'
 wp litespeed-purge all'

@@ -59,7 +59,7 @@ Datos del hosting, sin claves ni contraseñas.
 | Bogotá: Usaquén y Chapinero | Domicilio Bogotá norte | $6.000 |
 | Bogotá: las demás localidades | Domicilio resto de Bogotá | $8.500 |
 | Resto de Colombia | Envío nacional | $15.000 |
-| Todas | Recoger | Gratis |
+| Todas | Recoger en Santa Bárbara Oriental | Gratis |
 
 - Para Bogotá el checkout pide la **localidad** (obligatoria) y muestra solo el domicilio de
   esa zona. Al elegirla se marca ese domicilio solo; si la clienta luego elige "Recoger", se respeta.
@@ -67,4 +67,4 @@ Datos del hosting, sin claves ni contraseñas.
 - Se envía siempre a la dirección de facturación (no hay "enviar a otra dirección").
 - Probado el 1 oct: Chapinero → $6.000, Suba → $8.500, Valle → $15.000, Recoger → $0 y Bogotá
   sin localidad → error.
-- Pendiente: dirección o punto de recogida, para mostrarlo en el checkout y en el correo.
+- Recogida en **Santa Bárbara Oriental**. La dirección exacta no se publica: el aviso en la página de gracias y en el correo dice que se coordina por WhatsApp.
