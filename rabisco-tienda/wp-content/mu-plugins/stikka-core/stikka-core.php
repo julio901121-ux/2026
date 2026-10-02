@@ -9,6 +9,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
+require_once __DIR__ . '/personalizacion.php';
+
 const STIKKA_OPCION = 'stikka_ajustes';
 
 function stikka_ajustes() {
@@ -125,6 +127,15 @@ add_action( 'init', function () {
 	remove_action( 'woocommerce_no_products_found', 'wc_no_products_found' );
 	add_action( 'woocommerce_no_products_found', 'rabisco_pronto' );
 } );
+
+/* ---------- Textos que Kadence no trae traducidos ---------- */
+
+add_filter( 'gettext', function ( $traducido, $original, $dominio ) {
+	if ( 'kadence' === $dominio && 'Cart Summary' === $original ) {
+		return 'Tu pedido';
+	}
+	return $traducido;
+}, 10, 3 );
 
 /* ---------- Estilos de ambos ---------- */
 

@@ -42,3 +42,12 @@ Datos del hosting, sin claves ni contraseñas.
 
 - Se entra por llave SSH (`~/.ssh/stikka_hostinger` en el Mac de Julio). La llave privada nunca sale de ese equipo.
 - La llave pública está cargada en hPanel → Avanzado → Acceso SSH → Llaves SSH.
+
+## Decisiones de WooCommerce
+
+- Carrito y checkout **clásicos** (shortcodes) en vez de bloques: los bloques salían a medias en
+  inglés con es_CO, se desbordaban en el celular y el clásico es más compatible con Bold y con
+  la personalización.
+- Inventario activo a nivel global, pero solo el Kit del Elfo lo usa (los demás productos tienen
+  `manage_stock=false`).
+- Valoraciones desactivadas. Teléfono obligatorio en el checkout.
