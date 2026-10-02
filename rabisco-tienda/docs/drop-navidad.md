@@ -25,7 +25,7 @@ Los primeros (y por ahora únicos) productos de Rabisco. El drop es lo principal
 - Probado el 1 oct con un precio de prueba: valida el nombre obligatorio, la personalización llega
   al carrito y al checkout, y no queda nada en inglés. Después volvió a borrador sin precio.
 
-**Para publicarlo falta:** precio y fotos. Al publicarlo, conviene activar el banner en
+**Para publicarlo falta:** fotos (en `~/Documents/PROYECTOS/rabisco-tienda/FOTOS PRODUCTOS/kit-del-elfo/`). Precio: $90.000. Al publicarlo, conviene activar el banner en
 Ajustes → Rabisco, por ejemplo "Preventa Kit del Elfo · solo 60 kits · entrega antes del 10 de noviembre".
 
 ## Productos (en borrador)
@@ -34,7 +34,7 @@ Ajustes → Rabisco, por ejemplo "Preventa Kit del Elfo · solo 60 kits · entre
 |---|---|---|---|
 | 41 | Tags navideños para regalos | Variable: 20 tags (#45), 40 tags (#46) | Precio de cada opción, fotos, campos de personalización |
 | 42 | Carta a Santa personalizada | Simple | Precio, fotos, campos |
-| 43 | Kit del Elfo | Simple, 60 unidades | **Precio y fotos** (lo demás está listo) |
+| 43 | Kit del Elfo | Simple, $90.000, 60 unidades | **Fotos** (lo demás está listo) |
 | 44 | Combo Navidad | Simple | Precio, fotos, qué incluye exactamente |
 
 Se publican cuando tengan precio y al menos una foto. Los textos cortos son provisionales.

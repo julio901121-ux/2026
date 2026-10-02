@@ -51,3 +51,20 @@ Datos del hosting, sin claves ni contraseñas.
 - Inventario activo a nivel global, pero solo el Kit del Elfo lo usa (los demás productos tienen
   `manage_stock=false`).
 - Valoraciones desactivadas. Teléfono obligatorio en el checkout.
+
+## Envíos (scripts/envios.sh + mu-plugin envios.php)
+
+| Zona | Opción | Valor |
+|---|---|---|
+| Bogotá: Usaquén y Chapinero | Domicilio Bogotá norte | $6.000 |
+| Bogotá: las demás localidades | Domicilio resto de Bogotá | $8.500 |
+| Resto de Colombia | Envío nacional | $15.000 |
+| Todas | Recoger | Gratis |
+
+- Para Bogotá el checkout pide la **localidad** (obligatoria) y muestra solo el domicilio de
+  esa zona. Al elegirla se marca ese domicilio solo; si la clienta luego elige "Recoger", se respeta.
+- La localidad queda en el pedido (admin y correos).
+- Se envía siempre a la dirección de facturación (no hay "enviar a otra dirección").
+- Probado el 1 oct: Chapinero → $6.000, Suba → $8.500, Valle → $15.000, Recoger → $0 y Bogotá
+  sin localidad → error.
+- Pendiente: dirección o punto de recogida, para mostrarlo en el checkout y en el correo.

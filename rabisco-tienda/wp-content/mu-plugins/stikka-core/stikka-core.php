@@ -10,6 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 
 require_once __DIR__ . '/personalizacion.php';
+require_once __DIR__ . '/envios.php';
 
 const STIKKA_OPCION = 'stikka_ajustes';
 
@@ -145,6 +146,7 @@ add_action( 'wp_head', function () {
 		.stikka-banner{background:var(--stikka-turquesa-suave,#e3f4f1);color:var(--stikka-turquesa-texto,#1e6f66);text-align:center;font-weight:700;padding:.6rem 1rem;font-size:.95rem}
 		.stikka-whatsapp{position:fixed;right:16px;bottom:16px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:transform .15s}
 		.stikka-whatsapp:hover{transform:scale(1.06);color:#fff}
+		#billing_localidad_field .optional{display:none}
 		.rabisco-pronto{text-align:center;color:var(--global-palette5);font-size:1.05rem;padding:1.5rem;border:1.5px dashed var(--global-palette7);border-radius:14px}
 		@media (prefers-reduced-motion:reduce){.stikka-whatsapp{transition:none}}
 	</style>
