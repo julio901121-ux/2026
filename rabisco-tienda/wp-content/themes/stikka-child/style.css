@@ -2,7 +2,7 @@
 Theme Name:   Rabisco Paper Studio
 Template:     kadence
 Description:  Tema hijo de Kadence para Rabisco Paper Studio (antes Stikka). Base crema y neutra; los colores del logo van como acentos.
-Version:      0.2.1
+Version:      0.3.1
 Text Domain:  stikka-child
 */
 
@@ -87,6 +87,89 @@ input[type="submit"],
 .woocommerce ul.products li.product .woocommerce-loop-image-link img,
 .wc-block-grid__product-image img {
 	border-radius: var(--stikka-radio);
+}
+
+/* ---------- Drop de Navidad (inicio) ---------- */
+
+/* Confeti suave con los colores de las letras del logo */
+.rabisco-drop-hero {
+	padding: 4.5rem 1rem 4rem;
+	background-color: var(--global-palette8);
+	background-image:
+		radial-gradient(circle at 8% 22%, var(--rabisco-terracota) 0 5px, transparent 6px),
+		radial-gradient(circle at 92% 16%, var(--rabisco-turquesa) 0 6px, transparent 7px),
+		radial-gradient(circle at 15% 78%, var(--rabisco-mostaza) 0 4px, transparent 5px),
+		radial-gradient(circle at 85% 70%, var(--rabisco-azul) 0 5px, transparent 6px),
+		radial-gradient(circle at 70% 90%, var(--rabisco-rosa) 0 4px, transparent 5px),
+		radial-gradient(circle at 28% 10%, var(--rabisco-verde) 0 4px, transparent 5px);
+	border-bottom: 1px solid var(--global-palette7);
+}
+.rabisco-drop-hero h1 {
+	font-size: clamp(2.4rem, 7vw, 4rem);
+	line-height: 1.05;
+	margin: 0.4em 0 0.35em;
+}
+.rabisco-eyebrow {
+	display: table;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding: 0.35rem 1rem;
+	border: 1.5px solid var(--global-palette1);
+	border-radius: 999px;
+	color: var(--global-palette1);
+	font-size: 0.8rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+.rabisco-fecha {
+	margin-top: 1.25rem;
+	font-size: 0.95rem;
+	color: var(--global-palette5);
+}
+.rabisco-seccion {
+	padding: 3.5rem 1rem;
+}
+.rabisco-banda {
+	padding: 3rem 1rem;
+	background: var(--global-palette9);
+	border-top: 1px solid var(--global-palette7);
+	border-bottom: 1px solid var(--global-palette7);
+}
+.rabisco-banda h2 {
+	font-size: clamp(1.5rem, 4vw, 2.1rem);
+}
+/* Kadence le quita el padding lateral a los bloques de ancho completo */
+.rabisco-drop-hero,
+.rabisco-banda,
+.rabisco-seccion {
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+@media (max-width: 600px) {
+	.rabisco-drop-hero {
+		padding-top: 3rem;
+		/* En celular el confeti va solo en las esquinas para no tapar texto */
+		background-image:
+			radial-gradient(circle at 6% 4%, var(--rabisco-terracota) 0 4px, transparent 5px),
+			radial-gradient(circle at 94% 6%, var(--rabisco-turquesa) 0 5px, transparent 6px),
+			radial-gradient(circle at 5% 97%, var(--rabisco-mostaza) 0 4px, transparent 5px),
+			radial-gradient(circle at 95% 95%, var(--rabisco-azul) 0 4px, transparent 5px),
+			radial-gradient(circle at 50% 2%, var(--rabisco-rosa) 0 3px, transparent 4px);
+	}
+	.rabisco-eyebrow {
+		font-size: 0.7rem;
+		letter-spacing: 0.06em;
+	}
+}
+
+/* "Drop de Navidad" resaltado en el menú */
+.menu-drop > a {
+	color: var(--global-palette1) !important;
+	font-weight: 800;
+}
+.menu-drop > a::before {
+	content: "✦ ";
 }
 
 /* Preguntas frecuentes en tarjetas desplegables */
